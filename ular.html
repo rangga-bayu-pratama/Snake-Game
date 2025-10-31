@@ -1,0 +1,35 @@
+<!--
+    File: ular.html
+    Deskripsi: Ini adalah file utama untuk Game Ular (Snake Game) berbasis web.
+    File ini berisi struktur HTML dasar, termasuk:
+    - Tag <canvas> untuk area permainan ular
+    - Elemen untuk menampilkan skor dan status game
+    - Tombol untuk me-restart permainan
+    - Menghubungkan file CSS (style.css) untuk styling
+    - Script JavaScript (script.js) untuk logika game (biasanya dihubungkan di bagian bawah, tambahkan jika belum ada)
+    Silakan modifikasi sesuai kebutuhan pengembangan game ular Anda.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Ular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>GAME ULAR</h1>
+    <canvas id="gameCanvas" width="1000" height="400"></canvas>
+    <div class="info">
+        <p>Skor : <span id="score"></span>0
+        </p>
+        <p id="GameOver" style="display: none; color: aqua;">Game Over</p>
+        <button onclick="RestartGame()">Restart  Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
