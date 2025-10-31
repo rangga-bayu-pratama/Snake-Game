@@ -1,0 +1,86 @@
+/*
+    File: style.css
+    Deskripsi: File ini berisi aturan CSS untuk tampilan Game Ular (Snake Game).
+    Setiap blok CSS di bawah ini diberi komentar penjelasan.
+*/
+
+/* Mengatur tampilan utama halaman (body) */
+body {
+    text-align: center; /* Teks di tengah */
+    /* Fallback color jika gambar tidak tersedia */
+    background-color: purple;
+    /* Layered background: semi-transparent overlay + gambar */
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('img/jdm-fon-stil-stiker.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; /* Pastikan cover dan responsive */
+    font-family: Arial, Helvetica, sans-serif; /* Font utama */
+    color: white; /* Warna teks */
+    margin: 0; /* Hilangkan margin default */
+    padding: 20px; /* Padding di sekeliling konten */
+    min-height: 100vh; /* Pastikan body selalu mengisi viewport */
+}
+
+/* Mengatur tampilan area permainan (canvas) */
+canvas {
+    border: 2px solid white; /* Garis tepi putih */
+    background-color: black; /* Latar belakang hitam */
+}
+
+/* Mengatur tampilan tombol (button) */
+button {
+    padding: 10px 16px; /* Ruang dalam tombol */
+    background: blue; /* Warna latar tombol */
+    color: white; /* Warna teks tombol */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Kursor jadi pointer saat hover */
+}
+
+/* Mengatur tampilan container info skor dan status */
+.info {
+    margin: 10px; /* Jarak luar info */
+}
+
+/* Styling untuk text Game Over */
+.game-over {
+    display: none;
+    font-size: 36px;
+    font-weight: 800;
+    color: #ff0000;
+    text-shadow: 
+        0 0 10px #ff0000,
+        0 0 15px #ff0000,
+        0 0 20px #ff0000,
+        1px 1px 1px rgba(0,0,0,1),
+        -1px -1px 1px rgba(0,0,0,1),
+        1px -1px 1px rgba(0,0,0,1),
+        -1px 1px 1px rgba(0,0,0,1);
+    -webkit-text-stroke: 1px #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 15px auto;
+    animation: gameOverPulse 1.5s infinite;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 15px;
+    border-radius: 8px;
+    z-index: 100;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Animasi untuk text Game Over */
+@keyframes gameOverPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
